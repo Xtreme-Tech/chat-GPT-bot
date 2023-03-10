@@ -1,19 +1,25 @@
-# chatGPT-Discord-bot
-The code is a Python script that creates a Discord bot, which can communicate with the OpenAI chat API. The bot responds to commands sent in a Discord channel, such as "ping", "login", "send", "help", and "about".
+#Beluga Cat - an OpenAI-powered chatbot for Discord
+Beluga Cat is a chatbot that can communicate with humans and provide responses to their messages. It's powered by the OpenAI API, which uses artificial intelligence to generate natural language responses.
 
-To use the bot, you'll need to set up a Discord bot account and an OpenAI API account, and then configure the code with the appropriate credentials (i.e., your Discord bot token, OpenAI email and password).
+##Getting started
+To use Beluga Cat, you'll need to have a Discord account and a Discord bot token. You can get a token by following [these instructions]
+(https://discordpy.readthedocs.io/en/latest/discord.html).
 
-The code uses the discord.py library to create the bot, and the requests and beautifulsoup4 libraries to communicate with the OpenAI chat API. The asyncio library is used for asynchronous programming.
+You'll also need to have an OpenAI account and provide your email and password in the config.py file. If you don't have an OpenAI account yet, you can sign up [here](https://beta.openai.com/signup/).
 
-Here are brief descriptions of the functions used in the code:
+Once you have both your Discord bot token and your OpenAI credentials, you can start using Beluga Cat by running the beluga_cat.py script.
 
-on_ready(): This function is called when the bot has successfully connected to the Discord server. It sends a test message to a specified channel.
+##Features
+Beluga Cat responds to commands that start with the prefix /. Here are some of the available commands:
 
-handle_command(message, command): This function processes a command sent by a user in a Discord channel. It checks the command against a list of available commands, and calls the appropriate function to handle the command.
+/ping: Test the bot's responsiveness.
+/login <email> <password>: Log in to the OpenAI chat website.
+/send <message>: Send a message to the OpenAI chat website.
+/help: List available commands.
+/about: Display information about the bot.
+Beluga Cat can also respond to regular messages that don't start with the prefix /. In this case, it will try to generate a natural language response using the OpenAI API.
 
-login(email, password): This function logs into the OpenAI chat website using the specified email and password, and returns the initial message and session cookies.
+##Contributing
+If you'd like to contribute to Beluga Cat, you can fork this repository and make your changes in a new branch. Once you're done, you can create a pull request and we'll review your changes.
 
-send_message(message, session): This function sends a message to the OpenAI chat website using the specified session cookies, and returns the response message and whether the bot is "thinking" (i.e., generating a response).
-
-on_message(message): This function is called whenever a message is sent in a Discord channel that the bot can access. It checks if the message starts with the bot's command prefix, and if so, calls the handle_command() function to process the command.
-
+Please make sure to follow the [Python style guide](https://www.python.org/dev/peps/pep-0008/) when writing code, and to test your changes thoroughly before submitting them.
