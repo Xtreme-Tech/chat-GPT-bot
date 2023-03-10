@@ -17,4 +17,3 @@ send_message(message, session): This function sends a message to the OpenAI chat
 
 on_message(message): This function is called whenever a message is sent in a Discord channel that the bot can access. It checks if the message starts with the bot's command prefix, and if so, calls the handle_command() function to process the command.
 
-That's a brief overview of the code. Let me know if you have any specific questions or need further explanation!
